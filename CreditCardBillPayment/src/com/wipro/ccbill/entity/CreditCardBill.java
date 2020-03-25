@@ -48,7 +48,7 @@ public class CreditCardBill {
     
     public double calculateBillAmount() throws InputValidationException
     {
-    	double CRamount=0;
+    	double cramount=0;
     	double DBamount=0;
     	if(!validateData().equals("valid"))
     	{
@@ -58,9 +58,9 @@ public class CreditCardBill {
     	{
     		if(monthTransactions!=null && monthTransactions.length>0)
     		{
-    			CRamount=getTotalAmount("CR");
+    			cramount=getTotalAmount("CR");
     			DBamount=getTotalAmount("DB");
-    			double outstandingpaid=Math.abs(DBamount-CRamount);
+    			double outstandingpaid=Math.abs(DBamount-cramount);
     			double totalAmount=(outstandingpaid*19.9)/1200;
     					
     		     return outstandingpaid+totalAmount;
